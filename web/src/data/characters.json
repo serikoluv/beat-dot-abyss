@@ -1,0 +1,1208 @@
+[
+ {
+  "key": "【お菓子の国の三ツ星パティシエ】ミルティーユ",
+  "title": "お菓子の国の三ツ星パティシエ",
+  "name": "ミルティーユ",
+  "rarity": "SSR",
+  "faction": "ルクスノヴァ",
+  "element": "土",
+  "stance": "バック",
+  "emblem": "情熱",
+  "weapon": "魔導書",
+  "prop": {
+   "kind": "next_card",
+   "mark": "料理",
+   "n": 0,
+   "bonus": 20.0,
+   "desc": "次カード料理固定+20%"
+  }
+ },
+ {
+  "key": "【けなげな暴力ウエイトレス】エミリー",
+  "title": "けなげな暴力ウエイトレス",
+  "name": "エミリー",
+  "rarity": "SSR",
+  "faction": "エルドラーナ",
+  "element": "光",
+  "stance": "アシスト",
+  "emblem": "衝撃",
+  "weapon": "ピッケル",
+  "prop": {
+   "kind": "next_card",
+   "mark": "料理",
+   "n": 0,
+   "bonus": 10.0,
+   "desc": "次カード料理固定+10%"
+  }
+ },
+ {
+  "key": "【ぶっ飛び天才鍛冶師ちゃん】ホノカ",
+  "title": "ぶっ飛び天才鍛冶師ちゃん",
+  "name": "ホノカ",
+  "rarity": "SSR",
+  "faction": "千国連合",
+  "element": "火",
+  "stance": "アシスト",
+  "emblem": "情熱",
+  "weapon": "ピッケル",
+  "prop": {
+   "kind": "buff_all",
+   "mark": "",
+   "n": 0,
+   "bonus": 20.0,
+   "desc": "全体+20%"
+  }
+ },
+ {
+  "key": "【キューティデビル】エミリー",
+  "title": "",
+  "name": "【キューティデビル】エミリー",
+  "rarity": "SSR",
+  "faction": "エルドラーナ",
+  "element": "",
+  "stance": "",
+  "emblem": "",
+  "weapon": "",
+  "prop": {
+   "kind": "grant_chain",
+   "mark": "接客→ドリンク",
+   "n": 0,
+   "bonus": 0.0,
+   "desc": "連鎖: 接客→ドリンク"
+  }
+ },
+ {
+  "key": "【コミュ障魔法植物使い】マニョリア",
+  "title": "コミュ障魔法植物使い",
+  "name": "マニョリア",
+  "rarity": "SSR",
+  "faction": "エルドラーナ",
+  "element": "土",
+  "stance": "バック",
+  "emblem": "情熱",
+  "weapon": "杖",
+  "prop": {
+   "kind": "buff_great",
+   "mark": "",
+   "n": 0,
+   "bonus": 50.0,
+   "desc": "Great以上+50%"
+  }
+ },
+ {
+  "key": "【作られし愛娘】ウェンディ",
+  "title": "作られし愛娘",
+  "name": "ウェンディ",
+  "rarity": "SSR",
+  "faction": "ペルディオン",
+  "element": "無",
+  "stance": "フロント",
+  "emblem": "衝撃",
+  "weapon": "大剣",
+  "prop": {
+   "kind": "grant_faction",
+   "mark": "料理",
+   "n": 3,
+   "bonus": 20.0,
+   "desc": "ペルディオン3体に料理+20%"
+  }
+ },
+ {
+  "key": "【呪縛の暗黒騎士】フィルム",
+  "title": "呪縛の暗黒騎士",
+  "name": "フィルム",
+  "rarity": "SSR",
+  "faction": "ミレスガルド",
+  "element": "闇",
+  "stance": "フロント",
+  "emblem": "衝撃",
+  "weapon": "大剣",
+  "prop": {
+   "kind": "grant_faction",
+   "mark": "ドリンク",
+   "n": 3,
+   "bonus": 20.0,
+   "desc": "ミレスガルド3体にドリンク+20%"
+  }
+ },
+ {
+  "key": "【夏色プレイ！】【水着】ホノカ",
+  "title": "夏色プレイ！",
+  "name": "【水着】ホノカ",
+  "rarity": "SSR",
+  "faction": "千国連合",
+  "element": "火",
+  "stance": "バック",
+  "emblem": "情熱",
+  "weapon": "杖",
+  "prop": {
+   "kind": "grant_faction",
+   "mark": "接客",
+   "n": 3,
+   "bonus": 20.0,
+   "desc": "千国連合3体に接客+20%"
+  }
+ },
+ {
+  "key": "【大地と唄う翠の詩人】ラモーナ",
+  "title": "大地と唄う翠の詩人",
+  "name": "ラモーナ",
+  "rarity": "SSR",
+  "faction": "ペルディオン",
+  "element": "土",
+  "stance": "バック",
+  "emblem": "情熱",
+  "weapon": "弓",
+  "prop": {
+   "kind": "next_card",
+   "mark": "ドリンク",
+   "n": 0,
+   "bonus": 10.0,
+   "desc": "次カードドリンク固定+10%"
+  }
+ },
+ {
+  "key": "【天空海闊の自然児】【水着】クルル",
+  "title": "天空海闊の自然児",
+  "name": "【水着】クルル",
+  "rarity": "SSR",
+  "faction": "千国連合",
+  "element": "水",
+  "stance": "フロント",
+  "emblem": "情熱",
+  "weapon": "大剣",
+  "prop": {
+   "kind": "grant_faction",
+   "mark": "ドリンク",
+   "n": 3,
+   "bonus": 20.0,
+   "desc": "千国連合3体にドリンク+20%"
+  }
+ },
+ {
+  "key": "【太陽の踊り子】レヴィエーヌ",
+  "title": "太陽の踊り子",
+  "name": "レヴィエーヌ",
+  "rarity": "SSR",
+  "faction": "エルドラーナ",
+  "element": "火",
+  "stance": "フロント",
+  "emblem": "情熱",
+  "weapon": "拳",
+  "prop": {
+   "kind": "grant_faction",
+   "mark": "接客",
+   "n": 2,
+   "bonus": 40.0,
+   "desc": "エルドラーナ2体に接客+40%"
+  }
+ },
+ {
+  "key": "【好奇心旺盛な魔法科学者】フレデリカ",
+  "title": "好奇心旺盛な魔法科学者",
+  "name": "フレデリカ",
+  "rarity": "SSR",
+  "faction": "エルドラーナ",
+  "element": "闇",
+  "stance": "バック",
+  "emblem": "衝撃",
+  "weapon": "魔導書",
+  "prop": {
+   "kind": "grant_faction",
+   "mark": "接客",
+   "n": 3,
+   "bonus": 20.0,
+   "desc": "エルドラーナ3体に接客+20%"
+  }
+ },
+ {
+  "key": "【守銭奴トレジャーハンター】メリッサ",
+  "title": "守銭奴トレジャーハンター",
+  "name": "メリッサ",
+  "rarity": "SSR",
+  "faction": "ミレスガルド",
+  "element": "土",
+  "stance": "アシスト",
+  "emblem": "情熱",
+  "weapon": "ピッケル",
+  "prop": {
+   "kind": "next_card",
+   "mark": "料理",
+   "n": 0,
+   "bonus": 10.0,
+   "desc": "次カード料理固定+10%"
+  }
+ },
+ {
+  "key": "【嵐を呼ぶ海賊娘】ルシータ",
+  "title": "嵐を呼ぶ海賊娘",
+  "name": "ルシータ",
+  "rarity": "SSR",
+  "faction": "エルドラーナ",
+  "element": "火",
+  "stance": "バック",
+  "emblem": "情熱",
+  "weapon": "銃",
+  "prop": {
+   "kind": "next_card",
+   "mark": "ドリンク",
+   "n": 0,
+   "bonus": 10.0,
+   "desc": "次カードドリンク固定+10%"
+  }
+ },
+ {
+  "key": "【忠義を尽くすケモミミ侍】コトノ",
+  "title": "忠義を尽くすケモミミ侍",
+  "name": "コトノ",
+  "rarity": "SSR",
+  "faction": "千国連合",
+  "element": "土",
+  "stance": "フロント",
+  "emblem": "情熱",
+  "weapon": "大剣",
+  "prop": {
+   "kind": "grant_faction",
+   "mark": "料理",
+   "n": 3,
+   "bonus": 20.0,
+   "desc": "千国連合3体に料理+20%"
+  }
+ },
+ {
+  "key": "【快活！小悪魔ギャルちゃん】リエラ",
+  "title": "快活！小悪魔ギャルちゃん",
+  "name": "リエラ",
+  "rarity": "SSR",
+  "faction": "千国連合",
+  "element": "闇",
+  "stance": "バック",
+  "emblem": "衝撃",
+  "weapon": "銃",
+  "prop": {
+   "kind": "buff_great",
+   "mark": "",
+   "n": 0,
+   "bonus": 50.0,
+   "desc": "Great以上+50%"
+  }
+ },
+ {
+  "key": "【想いを燃やす恋の鬼】クレハ",
+  "title": "想いを燃やす恋の鬼",
+  "name": "クレハ",
+  "rarity": "SSR",
+  "faction": "千国連合",
+  "element": "火",
+  "stance": "フロント",
+  "emblem": "情熱",
+  "weapon": "片手剣",
+  "prop": {
+   "kind": "grant_faction",
+   "mark": "接客",
+   "n": 1,
+   "bonus": 100.0,
+   "desc": "千国連合1体に接客+100%"
+  }
+ },
+ {
+  "key": "【星詠みの占星術師】クリスティ",
+  "title": "星詠みの占星術師",
+  "name": "クリスティ",
+  "rarity": "SSR",
+  "faction": "ペルディオン",
+  "element": "闇",
+  "stance": "バック",
+  "emblem": "衝撃",
+  "weapon": "杖",
+  "prop": {
+   "kind": "grant_faction",
+   "mark": "料理",
+   "n": 2,
+   "bonus": 40.0,
+   "desc": "ペルディオン2体に料理+40%"
+  }
+ },
+ {
+  "key": "【水神拳聖】ヒュメナ",
+  "title": "水神拳聖",
+  "name": "ヒュメナ",
+  "rarity": "SSR",
+  "faction": "ミレスガルド",
+  "element": "水",
+  "stance": "フロント",
+  "emblem": "情熱",
+  "weapon": "拳",
+  "prop": {
+   "kind": "next_card",
+   "mark": "接客",
+   "n": 0,
+   "bonus": 10.0,
+   "desc": "次カード接客固定+10%"
+  }
+ },
+ {
+  "key": "【氷上の芸術家】シルヴィア",
+  "title": "氷上の芸術家",
+  "name": "シルヴィア",
+  "rarity": "SSR",
+  "faction": "ルクスノヴァ",
+  "element": "水",
+  "stance": "フロント",
+  "emblem": "情熱",
+  "weapon": "片手剣",
+  "prop": {
+   "kind": "buff_scaled",
+   "mark": "",
+   "n": 0,
+   "bonus": 50.0,
+   "desc": "評価比例+20/50%"
+  }
+ },
+ {
+  "key": "【氷晶の魔法使い】ヴィーラ",
+  "title": "氷晶の魔法使い",
+  "name": "ヴィーラ",
+  "rarity": "SSR",
+  "faction": "ペルディオン",
+  "element": "水",
+  "stance": "バック",
+  "emblem": "情熱",
+  "weapon": "杖",
+  "prop": {
+   "kind": "buff_great",
+   "mark": "",
+   "n": 0,
+   "bonus": 50.0,
+   "desc": "Great以上+50%"
+  }
+ },
+ {
+  "key": "【永久の慈愛】シラエス",
+  "title": "永久の慈愛",
+  "name": "シラエス",
+  "rarity": "SSR",
+  "faction": "千国連合",
+  "element": "無",
+  "stance": "バック",
+  "emblem": "衝撃",
+  "weapon": "杖",
+  "prop": {
+   "kind": "next_card",
+   "mark": "接客",
+   "n": 0,
+   "bonus": 10.0,
+   "desc": "次カード接客固定+10%"
+  }
+ },
+ {
+  "key": "【清流の祈り手】ヒナギ",
+  "title": "清流の祈り手",
+  "name": "ヒナギ",
+  "rarity": "SSR",
+  "faction": "千国連合",
+  "element": "水",
+  "stance": "バック",
+  "emblem": "情熱",
+  "weapon": "魔導書",
+  "prop": {
+   "kind": "buff_all",
+   "mark": "",
+   "n": 0,
+   "bonus": 20.0,
+   "desc": "全体+20%"
+  }
+ },
+ {
+  "key": "【渚のメイド】【水着】ニナ",
+  "title": "渚のメイド",
+  "name": "【水着】ニナ",
+  "rarity": "SSR",
+  "faction": "ペルディオン",
+  "element": "無",
+  "stance": "バック",
+  "emblem": "衝撃",
+  "weapon": "弓",
+  "prop": {
+   "kind": "grant_faction",
+   "mark": "接客",
+   "n": 3,
+   "bonus": 20.0,
+   "desc": "ペルディオン3体に接客+20%"
+  }
+ },
+ {
+  "key": "【異世界実況ガチ勢】ピコ",
+  "title": "異世界実況ガチ勢",
+  "name": "ピコ",
+  "rarity": "SSR",
+  "faction": "ルクスノヴァ",
+  "element": "闇",
+  "stance": "アシスト",
+  "emblem": "衝撃",
+  "weapon": "ピッケル",
+  "prop": {
+   "kind": "grant_chain",
+   "mark": "ドリンク→接客",
+   "n": 0,
+   "bonus": 0.0,
+   "desc": "連鎖: ドリンク→接客"
+  }
+ },
+ {
+  "key": "【白炎の戦乙女】ラヴェリア",
+  "title": "白炎の戦乙女",
+  "name": "ラヴェリア",
+  "rarity": "SSR",
+  "faction": "ルクスノヴァ",
+  "element": "火",
+  "stance": "フロント",
+  "emblem": "情熱",
+  "weapon": "大剣",
+  "prop": {
+   "kind": "grant_chain",
+   "mark": "接客→ドリンク",
+   "n": 0,
+   "bonus": 0.0,
+   "desc": "連鎖: 接客→ドリンク"
+  }
+ },
+ {
+  "key": "【神出鬼没の妖刀使い】ハツネ",
+  "title": "神出鬼没の妖刀使い",
+  "name": "ハツネ",
+  "rarity": "SSR",
+  "faction": "千国連合",
+  "element": "無",
+  "stance": "フロント",
+  "emblem": "衝撃",
+  "weapon": "片手剣",
+  "prop": {
+   "kind": "next_card",
+   "mark": "ドリンク",
+   "n": 0,
+   "bonus": 10.0,
+   "desc": "次カードドリンク固定+10%"
+  }
+ },
+ {
+  "key": "【紅の猟銃使い】エティア",
+  "title": "紅の猟銃使い",
+  "name": "エティア",
+  "rarity": "SSR",
+  "faction": "エルドラーナ",
+  "element": "無",
+  "stance": "バック",
+  "emblem": "衝撃",
+  "weapon": "銃",
+  "prop": {
+   "kind": "grant_faction",
+   "mark": "接客",
+   "n": 3,
+   "bonus": 20.0,
+   "desc": "エルドラーナ3体に接客+20%"
+  }
+ },
+ {
+  "key": "【純潔の精霊術師】フィオナ",
+  "title": "純潔の精霊術師",
+  "name": "フィオナ",
+  "rarity": "SSR",
+  "faction": "エルドラーナ",
+  "element": "水",
+  "stance": "バック",
+  "emblem": "情熱",
+  "weapon": "弓",
+  "prop": {
+   "kind": "buff_all",
+   "mark": "",
+   "n": 0,
+   "bonus": 20.0,
+   "desc": "全体+20%"
+  }
+ },
+ {
+  "key": "【赤焔の弓使い】ウィステリア",
+  "title": "赤焔の弓使い",
+  "name": "ウィステリア",
+  "rarity": "SSR",
+  "faction": "ミレスガルド",
+  "element": "火",
+  "stance": "バック",
+  "emblem": "情熱",
+  "weapon": "弓",
+  "prop": {
+   "kind": "buff_great",
+   "mark": "",
+   "n": 0,
+   "bonus": 50.0,
+   "desc": "Great以上+50%"
+  }
+ },
+ {
+  "key": "【閃光の介添人】ニナ",
+  "title": "閃光の介添人",
+  "name": "ニナ",
+  "rarity": "SSR",
+  "faction": "ペルディオン",
+  "element": "光",
+  "stance": "フロント",
+  "emblem": "衝撃",
+  "weapon": "拳",
+  "prop": {
+   "kind": "next_card",
+   "mark": "接客",
+   "n": 0,
+   "bonus": 10.0,
+   "desc": "次カード接客固定+10%"
+  }
+ },
+ {
+  "key": "【降り注ぐ灼熱の断罪】【水着】ヘイリー",
+  "title": "",
+  "name": "【降り注ぐ灼熱の断罪】【水着】ヘイリー",
+  "rarity": "SSR",
+  "faction": "千国連合",
+  "element": "",
+  "stance": "",
+  "emblem": "",
+  "weapon": "",
+  "prop": {
+   "kind": "next_card",
+   "mark": "料理",
+   "n": 0,
+   "bonus": 10.0,
+   "desc": "次カード料理固定+10%"
+  }
+ },
+ {
+  "key": "【雷撃の導き手】ディアーナ",
+  "title": "雷撃の導き手",
+  "name": "ディアーナ",
+  "rarity": "SSR",
+  "faction": "千国連合",
+  "element": "光",
+  "stance": "バック",
+  "emblem": "衝撃",
+  "weapon": "弓",
+  "prop": {
+   "kind": "grant_faction",
+   "mark": "料理",
+   "n": 3,
+   "bonus": 20.0,
+   "desc": "千国連合3体に料理+20%"
+  }
+ },
+ {
+  "key": "【高性能アンドロイド】エレクトラ",
+  "title": "高性能アンドロイド",
+  "name": "エレクトラ",
+  "rarity": "SSR",
+  "faction": "ルクスノヴァ",
+  "element": "無",
+  "stance": "バック",
+  "emblem": "衝撃",
+  "weapon": "銃",
+  "prop": {
+   "kind": "grant_chain",
+   "mark": "料理→ドリンク",
+   "n": 0,
+   "bonus": 0.0,
+   "desc": "連鎖: 料理→ドリンク"
+  }
+ },
+ {
+  "key": "【魂のドリルマイスター】グラディア",
+  "title": "魂のドリルマイスター",
+  "name": "グラディア",
+  "rarity": "SSR",
+  "faction": "エルドラーナ",
+  "element": "土",
+  "stance": "アシスト",
+  "emblem": "情熱",
+  "weapon": "ピッケル",
+  "prop": {
+   "kind": "buff_good",
+   "mark": "",
+   "n": 0,
+   "bonus": 30.0,
+   "desc": "Good以上+30%"
+  }
+ },
+ {
+  "key": "【メスガキ魔法使い】ベリサ",
+  "title": "メスガキ魔法使い",
+  "name": "ベリサ",
+  "rarity": "SR",
+  "faction": "ペルディオン",
+  "element": "火",
+  "stance": "バック",
+  "emblem": "情熱",
+  "weapon": "杖",
+  "prop": {
+   "kind": "grant_faction",
+   "mark": "料理",
+   "n": 2,
+   "bonus": 10.0,
+   "desc": "ペルディオン2体に料理+10%"
+  }
+ },
+ {
+  "key": "【何でも売ってる旅商人】マリナ",
+  "title": "何でも売ってる旅商人",
+  "name": "マリナ",
+  "rarity": "SR",
+  "faction": "エルドラーナ",
+  "element": "水",
+  "stance": "アシスト",
+  "emblem": "情熱",
+  "weapon": "ピッケル",
+  "prop": {
+   "kind": "buff_good",
+   "mark": "",
+   "n": 0,
+   "bonus": 20.0,
+   "desc": "Good以上+20%"
+  }
+ },
+ {
+  "key": "【元（？）盗賊の採掘娘】ダリア",
+  "title": "元（？）盗賊の採掘娘",
+  "name": "ダリア",
+  "rarity": "SR",
+  "faction": "千国連合",
+  "element": "闇",
+  "stance": "アシスト",
+  "emblem": "衝撃",
+  "weapon": "ピッケル",
+  "prop": {
+   "kind": "grant_faction",
+   "mark": "接客",
+   "n": 2,
+   "bonus": 10.0,
+   "desc": "千国連合2体に接客+10%"
+  }
+ },
+ {
+  "key": "【半なまの英雄】ヘイリー",
+  "title": "半なまの英雄",
+  "name": "ヘイリー",
+  "rarity": "SR",
+  "faction": "千国連合",
+  "element": "無",
+  "stance": "フロント",
+  "emblem": "衝撃",
+  "weapon": "大剣",
+  "prop": {
+   "kind": "grant_faction",
+   "mark": "料理",
+   "n": 2,
+   "bonus": 10.0,
+   "desc": "千国連合2体に料理+10%"
+  }
+ },
+ {
+  "key": "【品行方正なビキニ兵士】カーラ",
+  "title": "品行方正なビキニ兵士",
+  "name": "カーラ",
+  "rarity": "SR",
+  "faction": "エルドラーナ",
+  "element": "水",
+  "stance": "フロント",
+  "emblem": "情熱",
+  "weapon": "片手剣",
+  "prop": {
+   "kind": "grant_faction",
+   "mark": "接客",
+   "n": 2,
+   "bonus": 10.0,
+   "desc": "エルドラーナ2体に接客+10%"
+  }
+ },
+ {
+  "key": "【嫣然の暗殺者】アヤメ",
+  "title": "嫣然の暗殺者",
+  "name": "アヤメ",
+  "rarity": "SR",
+  "faction": "千国連合",
+  "element": "闇",
+  "stance": "バック",
+  "emblem": "衝撃",
+  "weapon": "銃",
+  "prop": {
+   "kind": "grant_faction",
+   "mark": "ドリンク",
+   "n": 2,
+   "bonus": 10.0,
+   "desc": "千国連合2体にドリンク+10%"
+  }
+ },
+ {
+  "key": "【新人新聞記者】エメルダ",
+  "title": "新人新聞記者",
+  "name": "エメルダ",
+  "rarity": "SR",
+  "faction": "エルドラーナ",
+  "element": "闇",
+  "stance": "バック",
+  "emblem": "衝撃",
+  "weapon": "弓",
+  "prop": {
+   "kind": "next_card",
+   "mark": "ドリンク",
+   "n": 0,
+   "bonus": 5.0,
+   "desc": "次カードドリンク固定+5%"
+  }
+ },
+ {
+  "key": "【望郷の令和少女】ヒマリ",
+  "title": "望郷の令和少女",
+  "name": "ヒマリ",
+  "rarity": "SR",
+  "faction": "ルクスノヴァ",
+  "element": "闇",
+  "stance": "バック",
+  "emblem": "衝撃",
+  "weapon": "銃",
+  "prop": {
+   "kind": "buff_all",
+   "mark": "",
+   "n": 0,
+   "bonus": 10.0,
+   "desc": "全体+10%"
+  }
+ },
+ {
+  "key": "【清廉なる淑女】マーガレット",
+  "title": "清廉なる淑女",
+  "name": "マーガレット",
+  "rarity": "SR",
+  "faction": "ミレスガルド",
+  "element": "無",
+  "stance": "バック",
+  "emblem": "衝撃",
+  "weapon": "魔導書",
+  "prop": {
+   "kind": "grant_faction",
+   "mark": "ドリンク",
+   "n": 2,
+   "bonus": 10.0,
+   "desc": "ミレスガルド2体にドリンク+10%"
+  }
+ },
+ {
+  "key": "【疾風怒濤の自然児】クルル",
+  "title": "疾風怒濤の自然児",
+  "name": "クルル",
+  "rarity": "SR",
+  "faction": "千国連合",
+  "element": "土",
+  "stance": "フロント",
+  "emblem": "情熱",
+  "weapon": "拳",
+  "prop": {
+   "kind": "buff_good",
+   "mark": "",
+   "n": 0,
+   "bonus": 20.0,
+   "desc": "Good以上+20%"
+  }
+ },
+ {
+  "key": "【白雷の騎士生徒会長】ソフィア",
+  "title": "白雷の騎士生徒会長",
+  "name": "ソフィア",
+  "rarity": "SR",
+  "faction": "ミレスガルド",
+  "element": "光",
+  "stance": "フロント",
+  "emblem": "衝撃",
+  "weapon": "片手剣",
+  "prop": {
+   "kind": "next_card",
+   "mark": "接客",
+   "n": 0,
+   "bonus": 5.0,
+   "desc": "次カード接客固定+5%"
+  }
+ },
+ {
+  "key": "【紅玉老星】ジェンマ",
+  "title": "紅玉老星",
+  "name": "ジェンマ",
+  "rarity": "SR",
+  "faction": "ペルディオン",
+  "element": "土",
+  "stance": "アシスト",
+  "emblem": "情熱",
+  "weapon": "ピッケル",
+  "prop": {
+   "kind": "grant_faction",
+   "mark": "ドリンク",
+   "n": 2,
+   "bonus": 10.0,
+   "desc": "ペルディオン2体にドリンク+10%"
+  }
+ },
+ {
+  "key": "【騎士国の忠犬】ライム",
+  "title": "騎士国の忠犬",
+  "name": "ライム",
+  "rarity": "SR",
+  "faction": "ミレスガルド",
+  "element": "光",
+  "stance": "バック",
+  "emblem": "衝撃",
+  "weapon": "銃",
+  "prop": {
+   "kind": "grant_faction",
+   "mark": "ドリンク",
+   "n": 2,
+   "bonus": 10.0,
+   "desc": "ミレスガルド2体にドリンク+10%"
+  }
+ },
+ {
+  "key": "【騎士道まっしぐら】ローザ",
+  "title": "騎士道まっしぐら",
+  "name": "ローザ",
+  "rarity": "SR",
+  "faction": "ミレスガルド",
+  "element": "光",
+  "stance": "フロント",
+  "emblem": "衝撃",
+  "weapon": "片手剣",
+  "prop": {
+   "kind": "buff_good",
+   "mark": "",
+   "n": 0,
+   "bonus": 20.0,
+   "desc": "Good以上+20%"
+  }
+ },
+ {
+  "key": "【魔法学校落第生】イオラ",
+  "title": "魔法学校落第生",
+  "name": "イオラ",
+  "rarity": "SR",
+  "faction": "ペルディオン",
+  "element": "火",
+  "stance": "フロント",
+  "emblem": "情熱",
+  "weapon": "拳",
+  "prop": {
+   "kind": "buff_good",
+   "mark": "",
+   "n": 0,
+   "bonus": 20.0,
+   "desc": "Good以上+20%"
+  }
+ },
+ {
+  "key": "【黒き翼の召喚士】アイシャ",
+  "title": "黒き翼の召喚士",
+  "name": "アイシャ",
+  "rarity": "SR",
+  "faction": "千国連合",
+  "element": "無",
+  "stance": "バック",
+  "emblem": "衝撃",
+  "weapon": "杖",
+  "prop": {
+   "kind": "next_card",
+   "mark": "料理",
+   "n": 0,
+   "bonus": 5.0,
+   "desc": "次カード料理固定+5%"
+  }
+ },
+ {
+  "key": "【姫騎士オタクの黒魔導士】クロエ",
+  "title": "姫騎士オタクの黒魔導士",
+  "name": "クロエ",
+  "rarity": "R",
+  "faction": "ミレスガルド",
+  "element": "闇",
+  "stance": "バック",
+  "emblem": "衝撃",
+  "weapon": "杖",
+  "prop": {
+   "kind": "grant_faction",
+   "mark": "接客",
+   "n": 1,
+   "bonus": 0.0,
+   "desc": "ミレスガルド1体に接客+0%"
+  }
+ },
+ {
+  "key": "【宝石の魔女】スティーラ",
+  "title": "宝石の魔女",
+  "name": "スティーラ",
+  "rarity": "R",
+  "faction": "ペルディオン",
+  "element": "無",
+  "stance": "アシスト",
+  "emblem": "衝撃",
+  "weapon": "ピッケル",
+  "prop": {
+   "kind": "grant_faction",
+   "mark": "料理",
+   "n": 1,
+   "bonus": 0.0,
+   "desc": "ペルディオン1体に料理+0%"
+  }
+ },
+ {
+  "key": "【恵体の不良警官】セレスト",
+  "title": "恵体の不良警官",
+  "name": "セレスト",
+  "rarity": "R",
+  "faction": "ミレスガルド",
+  "element": "水",
+  "stance": "フロント",
+  "emblem": "情熱",
+  "weapon": "大剣",
+  "prop": {
+   "kind": "grant_faction",
+   "mark": "ドリンク",
+   "n": 1,
+   "bonus": 0.0,
+   "desc": "ミレスガルド1体にドリンク+0%"
+  }
+ },
+ {
+  "key": "【早撃ち魔法使い】シェリル",
+  "title": "早撃ち魔法使い",
+  "name": "シェリル",
+  "rarity": "R",
+  "faction": "ペルディオン",
+  "element": "火",
+  "stance": "バック",
+  "emblem": "情熱",
+  "weapon": "銃",
+  "prop": {
+   "kind": "grant_faction",
+   "mark": "接客",
+   "n": 1,
+   "bonus": 0.0,
+   "desc": "ペルディオン1体に接客+0%"
+  }
+ },
+ {
+  "key": "【桃色の一閃】ルカ",
+  "title": "桃色の一閃",
+  "name": "ルカ",
+  "rarity": "R",
+  "faction": "エルドラーナ",
+  "element": "光",
+  "stance": "フロント",
+  "emblem": "衝撃",
+  "weapon": "拳",
+  "prop": {
+   "kind": "grant_faction",
+   "mark": "ドリンク",
+   "n": 1,
+   "bonus": 0.0,
+   "desc": "エルドラーナ1体にドリンク+0%"
+  }
+ },
+ {
+  "key": "【火花散る剣技】フレイヤ",
+  "title": "火花散る剣技",
+  "name": "フレイヤ",
+  "rarity": "R",
+  "faction": "ミレスガルド",
+  "element": "火",
+  "stance": "フロント",
+  "emblem": "情熱",
+  "weapon": "片手剣",
+  "prop": {
+   "kind": "next_card",
+   "mark": "料理",
+   "n": 0,
+   "bonus": 0.0,
+   "desc": "次カード料理固定+0%"
+  }
+ },
+ {
+  "key": "【煌めきの打ち手】テルー",
+  "title": "煌めきの打ち手",
+  "name": "テルー",
+  "rarity": "R",
+  "faction": "ペルディオン",
+  "element": "水",
+  "stance": "バック",
+  "emblem": "情熱",
+  "weapon": "弓",
+  "prop": {
+   "kind": "grant_faction",
+   "mark": "料理",
+   "n": 1,
+   "bonus": 0.0,
+   "desc": "ペルディオン1体に料理+0%"
+  }
+ },
+ {
+  "key": "【碩学の弓使い】エルミア",
+  "title": "碩学の弓使い",
+  "name": "エルミア",
+  "rarity": "R",
+  "faction": "エルドラーナ",
+  "element": "無",
+  "stance": "バック",
+  "emblem": "衝撃",
+  "weapon": "弓",
+  "prop": {
+   "kind": "grant_faction",
+   "mark": "料理",
+   "n": 1,
+   "bonus": 0.0,
+   "desc": "エルドラーナ1体に料理+0%"
+  }
+ },
+ {
+  "key": "【秘密を抱く聖職者】ノエミ",
+  "title": "秘密を抱く聖職者",
+  "name": "ノエミ",
+  "rarity": "R",
+  "faction": "エルドラーナ",
+  "element": "土",
+  "stance": "バック",
+  "emblem": "情熱",
+  "weapon": "魔導書",
+  "prop": {
+   "kind": "grant_faction",
+   "mark": "接客",
+   "n": 1,
+   "bonus": 0.0,
+   "desc": "エルドラーナ1体に接客+0%"
+  }
+ },
+ {
+  "key": "【繚乱の盾】リタ",
+  "title": "繚乱の盾",
+  "name": "リタ",
+  "rarity": "R",
+  "faction": "ペルディオン",
+  "element": "土",
+  "stance": "フロント",
+  "emblem": "情熱",
+  "weapon": "片手剣",
+  "prop": {
+   "kind": "grant_faction",
+   "mark": "ドリンク",
+   "n": 1,
+   "bonus": 0.0,
+   "desc": "ペルディオン1体にドリンク+0%"
+  }
+ },
+ {
+  "key": "【若き工兵隊長】ベティ",
+  "title": "若き工兵隊長",
+  "name": "ベティ",
+  "rarity": "R",
+  "faction": "ミレスガルド",
+  "element": "火",
+  "stance": "アシスト",
+  "emblem": "情熱",
+  "weapon": "ピッケル",
+  "prop": {
+   "kind": "grant_faction",
+   "mark": "料理",
+   "n": 1,
+   "bonus": 0.0,
+   "desc": "ミレスガルド1体に料理+0%"
+  }
+ },
+ {
+  "key": "【見通す者】メレム",
+  "title": "見通す者",
+  "name": "メレム",
+  "rarity": "R",
+  "faction": "千国連合",
+  "element": "水",
+  "stance": "バック",
+  "emblem": "情熱",
+  "weapon": "魔導書",
+  "prop": {
+   "kind": "grant_faction",
+   "mark": "接客",
+   "n": 1,
+   "bonus": 0.0,
+   "desc": "千国連合1体に接客+0%"
+  }
+ },
+ {
+  "key": "【賑やかな死人】フェイリン",
+  "title": "賑やかな死人",
+  "name": "フェイリン",
+  "rarity": "R",
+  "faction": "千国連合",
+  "element": "闇",
+  "stance": "フロント",
+  "emblem": "衝撃",
+  "weapon": "大剣",
+  "prop": {
+   "kind": "next_card",
+   "mark": "料理",
+   "n": 0,
+   "bonus": 0.0,
+   "desc": "次カード料理固定+0%"
+  }
+ },
+ {
+  "key": "【超可愛的暴力少女】シャオレイ",
+  "title": "超可愛的暴力少女",
+  "name": "シャオレイ",
+  "rarity": "R",
+  "faction": "千国連合",
+  "element": "無",
+  "stance": "フロント",
+  "emblem": "衝撃",
+  "weapon": "拳",
+  "prop": {
+   "kind": "grant_faction",
+   "mark": "料理",
+   "n": 1,
+   "bonus": 0.0,
+   "desc": "千国連合1体に料理+0%"
+  }
+ },
+ {
+  "key": "【金色の狙撃手】シャノン",
+  "title": "金色の狙撃手",
+  "name": "シャノン",
+  "rarity": "R",
+  "faction": "エルドラーナ",
+  "element": "土",
+  "stance": "バック",
+  "emblem": "情熱",
+  "weapon": "銃",
+  "prop": {
+   "kind": "next_card",
+   "mark": "ドリンク",
+   "n": 0,
+   "bonus": 0.0,
+   "desc": "次カードドリンク固定+0%"
+  }
+ },
+ {
+  "key": "【雷光誘う天の巫女】ヤチヨ",
+  "title": "雷光誘う天の巫女",
+  "name": "ヤチヨ",
+  "rarity": "R",
+  "faction": "千国連合",
+  "element": "光",
+  "stance": "バック",
+  "emblem": "衝撃",
+  "weapon": "杖",
+  "prop": {
+   "kind": "grant_faction",
+   "mark": "ドリンク",
+   "n": 1,
+   "bonus": 0.0,
+   "desc": "千国連合1体にドリンク+0%"
+  }
+ }
+]

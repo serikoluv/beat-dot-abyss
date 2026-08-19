@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>アビス名簿</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📇</text></svg>">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
+</head>
+<body>
+<div class="wrap">
+  <div class="topbar">
+    <h1>アビス名簿<span class="sub">DOT ABYSS ROSTER</span></h1>
+    <span id="saveState">未保存</span>
+  </div>
+  <div class="banner" id="storageBanner">
+    このブラウザでは localStorage が使えないため、変更は自動保存されません。名簿タブの「JSONをコピー」で手動バックアップしてください。
+  </div>
+
+  <div class="tabs" role="tablist">
+    <button class="tab on" data-tab="roster">名簿</button>
+    <button class="tab" data-tab="opt">編成最適化</button>
+    <button class="tab" data-tab="adv">アドバイザ</button>
+  </div>
+
+  <!-- ============ 名簿 ============ -->
+  <div class="tabpane on" id="pane-roster">
+    <div class="panel">
+      <div class="panel-row">
+        <div class="field"><label for="syncLv">シンクロLv</label>
+          <input class="num" id="syncLv" type="number" min="1" max="120" value="60"></div>
+        <div class="field"><label for="barLv">酒場拡張</label>
+          <select id="barLv">
+            <option value="3">3階(9人/5T)</option><option value="2">2階(6人/4T)</option><option value="1">1階(3人/2T)</option>
+          </select></div>
+        <div style="flex:1"></div>
+        <div class="stat"><span class="v" id="stOwned">0</span><span class="k">所持</span></div>
+        <div class="stat"><span class="v" id="stPlace">0</span><span class="k">娼館配置可(絆1+)</span></div>
+        <div class="stat"><span class="v" id="stBond">0</span><span class="k">絆Lv合計</span></div>
+      </div>
+    </div>
+
+    <div class="panel filters" id="filters">
+      <input type="search" id="q" placeholder="名前で検索">
+      <button class="chip" data-f="rarity" data-v="SSR">SSR</button>
+      <button class="chip" data-f="rarity" data-v="SR">SR</button>
+      <button class="chip" data-f="rarity" data-v="R">R</button>
+      <button class="chip" data-f="stance" data-v="フロント">フロント</button>
+      <button class="chip" data-f="stance" data-v="バック">バック</button>
+      <button class="chip" data-f="stance" data-v="アシスト">アシスト</button>
+      <button class="chip" data-f="owned" data-v="1">所持のみ</button>
+    </div>
+
+    <div class="tablebox">
+    <table id="rosterTable">
+      <thead><tr>
+        <th>所持</th><th>キャラ</th><th>レア</th><th>所属</th><th>属性</th><th>スタンス</th>
+        <th>凸</th><th>絆Lv</th><th>アビ1</th><th>アビ2</th><th>アビ3</th><th>娼館提案</th>
+      </tr></thead>
+      <tbody id="rows"></tbody>
+    </table>
+    </div>
+
+    <div class="actions">
+      <button class="act" id="copyCsv">シミュレータ用CSVをコピー</button>
+      <button class="act ghost" id="copyJson">JSONをコピー</button>
+      <button class="act ghost" id="showImport">JSONを読み込む</button>
+      <button class="act danger" id="reset">全リセット</button>
+    </div>
+    <div class="hint">変更は自動でこのブラウザ（localStorage）に保存されます。最適化・アドバイザは上のタブから — このページ内で完結します。</div>
+
+    <details id="ioBox">
+      <summary>エクスポート / インポート</summary>
+      <textarea class="io" id="ioText" placeholder="ここに以前コピーしたJSONを貼り付けて「読み込み実行」"></textarea>
+      <div class="actions"><button class="act ghost" id="doImport">読み込み実行</button></div>
+    </details>
+  </div>
+
+  <!-- ============ 編成最適化 ============ -->
+  <div class="tabpane" id="pane-opt">
+    <div class="panel">
+      <h2>編成最適化</h2>
+      <p class="hint" style="margin-top:0">名簿の「所持かつ絆Lv1以上」のキャラから配置人数分の組み合わせを総当たり評価します。
+        ランキングは<b>固定ルールプレイ（simple）でのソウル上限14,070到達率と下振れ</b>を主基準にしています。</p>
+      <div class="panel-row">
+        <div class="field"><label for="optSims">本評価回数</label>
+          <input class="num" id="optSims" type="number" min="100" max="5000" value="600" style="width:70px"></div>
+        <div class="field"><label for="optPool">候補プール</label>
+          <input class="num" id="optPool" type="number" min="9" max="18" value="14" style="width:60px"></div>
+        <button class="act" id="optRun">最適化を実行</button>
+        <div class="progress"><div id="optBar"></div></div>
+        <span class="hint" id="optMsg" style="margin:0"></span>
+      </div>
+    </div>
+    <div id="optResults"></div>
+  </div>
+
+  <!-- ============ アドバイザ ============ -->
+  <div class="tabpane" id="pane-adv">
+    <div class="panel" id="advSetup">
+      <h2>営業アドバイザ</h2>
+      <p class="hint" style="margin-top:0">配置するスタッフを選んで営業開始。各ターン、実際に配られた3枚のカードを入力すると、
+        先読みシミュレーションで最適なカードと提案を提示します。部屋1〜3=フロア1、4〜6=フロア2、7〜9=フロア3。</p>
+      <div id="advPicker" class="deckgrid"></div>
+      <div class="actions">
+        <span class="hint" id="advPickMsg" style="margin:0"></span>
+        <button class="act" id="advStart" disabled>営業開始</button>
+      </div>
+    </div>
+
+    <div class="panel" id="advGame" style="display:none">
+      <div class="panel-row" style="justify-content:space-between">
+        <h2 id="advTurnTitle">ターン 1</h2>
+        <button class="act danger" id="advQuit">営業を終了/やり直す</button>
+      </div>
+      <div id="advCardInputs"></div>
+      <div class="actions">
+        <button class="act" id="advCalc">最適手を計算</button>
+        <div class="progress" style="max-width:200px"><div id="advBar"></div></div>
+      </div>
+      <div class="recbox" id="advRec" style="display:none"></div>
+      <div id="advGrantFix" style="display:none"></div>
+      <div class="actions" id="advApplyRow" style="display:none">
+        <div class="field"><label for="advCardSel">適用カード</label><select id="advCardSel"></select></div>
+        <div class="field"><label for="advPropSel">適用提案</label><select id="advPropSel"></select></div>
+        <button class="act" id="advApply">適用して次へ</button>
+      </div>
+      <div class="scorebar">
+        <span class="big" id="advScore">0</span>
+        <span class="cap" id="advCap">/ 14070 (ソウル上限)</span>
+      </div>
+      <div class="tablebox"><table id="advState">
+        <thead><tr><th>部屋</th><th>スタッフ</th><th>マーク</th><th>加算%</th><th>現在値</th><th>提案</th></tr></thead>
+        <tbody id="advStateRows"></tbody>
+      </table></div>
+    </div>
+  </div>
+</div>
+<script type="module" src="/src/main.ts"></script>
+</body>
+</html>
