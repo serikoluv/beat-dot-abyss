@@ -1,6 +1,6 @@
 import { renderAdvPicker } from "./views/advisor";
 
-const TABS = ["roster", "opt", "adv"] as const;
+const TABS = ["roster", "opt", "adv", "guide"] as const;
 type Tab = (typeof TABS)[number];
 
 function activate(tab: Tab): void {

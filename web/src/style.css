@@ -130,3 +130,20 @@ details summary{cursor:pointer; color:var(--ink-dim)}
   .chip,button.act,.deckbtn{transition:filter .12s}
   .chip:hover,button.act:hover:not(:disabled),.deckbtn:hover{filter:brightness(1.08)}
 }
+
+/* ---- 装備ガイド ---- */
+.gheader{display:flex; align-items:center; gap:8px; flex-wrap:wrap; margin-bottom:6px}
+.gchip{font-size:12px; border:1px solid var(--line); border-radius:999px; padding:1px 8px; color:var(--ink-dim)}
+.grole{font-weight:700; margin:4px 0 2px}
+#pane-guide h3{font-family:"DotGothic16",monospace; font-weight:400; font-size:15px;
+  margin:18px 0 8px; letter-spacing:.05em; color:var(--accent)}
+.gtable td, .gtable th{white-space:normal}
+.gtable th[scope=row]{background:var(--surface2); font-size:12px; color:var(--ink-dim);
+  text-align:left; padding:5px 8px; border-bottom:1px solid var(--line)}
+.gpick{font-weight:700}
+tr.galt td{color:var(--ink-dim); font-size:12px}
+.gops{margin:0; padding-left:22px}
+.gops li{margin-bottom:6px}
+.gnotes{margin:0; padding-left:20px}
+.gnotes li{margin-bottom:4px}
+.gnotes a{color:var(--accent); word-break:break-all}

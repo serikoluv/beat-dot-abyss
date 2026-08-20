@@ -4,6 +4,7 @@ import { initRouter } from "./router";
 import { initRoster } from "./views/roster";
 import { initOptimize } from "./views/optimize";
 import { initAdvisor } from "./views/advisor";
+import { initGuide } from "./views/guide";
 import { $ } from "./util";
 
 if (!storageOk) $("storageBanner").style.display = "block";
@@ -12,6 +13,7 @@ loadState();
 initRoster();
 initOptimize();
 initAdvisor();
+initGuide();
 initRouter();
 
 if (storageOk) setSaved(hasSaved() ? "保存済み" : "未入力");

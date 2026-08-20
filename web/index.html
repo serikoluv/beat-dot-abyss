@@ -21,6 +21,7 @@
     <button class="tab on" data-tab="roster">名簿</button>
     <button class="tab" data-tab="opt">編成最適化</button>
     <button class="tab" data-tab="adv">アドバイザ</button>
+    <button class="tab" data-tab="guide">装備ガイド</button>
   </div>
 
   <!-- ============ 名簿 ============ -->
@@ -134,6 +135,16 @@
         <tbody id="advStateRows"></tbody>
       </table></div>
     </div>
+  </div>
+  <!-- ============ 装備ガイド ============ -->
+  <div class="tabpane" id="pane-guide">
+    <div class="panel">
+      <h2>装備ガイド</h2>
+      <p class="hint" style="margin-top:0">wikiru・醜女氏noteの一次情報と実機確認に基づくキャラ別の最適装備。
+        調査が済んだキャラから順次追加。</p>
+      <div id="guidePicker" class="deckgrid"></div>
+    </div>
+    <div id="guideBody"></div>
   </div>
 </div>
 <script type="module" src="/src/main.ts"></script>

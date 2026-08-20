@@ -65,6 +65,13 @@ def main():
     missing = [c["key"] for c in merged if not c.get("prop")]
     print(f"wrote {OUT} ({len(merged)} chars)" + (f", 提案なし: {missing}" if missing else ""))
 
+    # 装備ガイド（docs/researchの結論をデータ化したもの）をそのままコピー
+    guides_src = REPO / "data/master/equipment_guides.json"
+    guides_out = OUT.parent / "guides.json"
+    guides = json.loads(guides_src.read_text(encoding="utf-8"))
+    guides_out.write_text(json.dumps(guides, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+    print(f"wrote {guides_out} ({len(guides)} guides)")
+
 
 if __name__ == "__main__":
     main()
