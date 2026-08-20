@@ -147,3 +147,9 @@ tr.galt td{color:var(--ink-dim); font-size:12px}
 .gnotes{margin:0; padding-left:20px}
 .gnotes li{margin-bottom:4px}
 .gnotes a{color:var(--accent); word-break:break-all}
+
+/* ---- キャラ画像サムネイル ---- */
+td.thumb{width:44px; padding:3px 4px}
+td.thumb img{width:40px; height:40px; object-fit:cover; border-radius:5px; display:block}
+td.thumb.up{cursor:pointer}
+td.thumb.up:hover{outline:2px solid var(--accent); outline-offset:-2px; border-radius:5px}

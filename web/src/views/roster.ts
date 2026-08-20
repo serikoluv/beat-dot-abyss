@@ -1,6 +1,15 @@
 import { CHARS } from "../data";
-import { entry, replaceState, save, setSaved, state, toCsv } from "../state";
+import { apiMode, entry, replaceState, save, setSaved, state, toCsv } from "../state";
 import { $, escapeAttr, escapeHtml } from "../util";
+
+/* 画像ファイル名: キャラキーのUTF-8バイト列をbase64url化（サーバ側と同一規則） */
+function imgName(key: string): string {
+  const bytes = new TextEncoder().encode(key);
+  let bin = "";
+  bytes.forEach(b => { bin += String.fromCharCode(b); });
+  return btoa(bin).replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "");
+}
+let imgBust = 0;   // アップロード直後のキャッシュ回避
 
 const filter = { q: "", rarity: new Set<string>(), stance: new Set<string>(), owned: false };
 
@@ -23,8 +32,12 @@ export function renderRoster(): void {
   for (const c of CHARS) {
     if (!matches(c)) continue;
     const e = entry(c.key);
+    const imgSrc = `chars/${imgName(c.key)}.png${imgBust ? "?v=" + imgBust : ""}`;
     frag.push(`<tr class="${e.o ? "" : "unowned"}">
       <td><input type="checkbox" data-k="${escapeAttr(c.key)}" data-f="o" ${e.o ? "checked" : ""}></td>
+      <td class="thumb${apiMode ? " up" : ""}" data-imgk="${escapeAttr(c.key)}"
+        ${apiMode ? `title="クリックで画像を設定"` : ""}><img src="${imgSrc}" alt="" loading="lazy"
+        onerror="this.style.display='none'"></td>
       <td class="name"><span class="t">${escapeHtml(c.title ? "【" + c.title + "】" : "")}</span>${escapeHtml(c.name)}</td>
       <td><span class="pill ${c.rarity}">${c.rarity}</span></td>
       <td>${escapeHtml(c.faction)}</td>
@@ -143,6 +156,51 @@ export function initRoster(): void {
     renderRoster();
     save();
   });
+
+  /* ---- ローカルAPIモード限定機能: 画像アップロードとgit同期 ---- */
+  if (apiMode) {
+    let uploadKey: string | null = null;
+    const fileInput = $("imgFile") as HTMLInputElement;
+    $("rows").addEventListener("click", ev => {
+      const td = (ev.target as HTMLElement).closest(".thumb.up") as HTMLElement | null;
+      if (!td) return;
+      uploadKey = td.dataset.imgk!;
+      fileInput.value = "";
+      fileInput.click();
+    });
+    fileInput.addEventListener("change", async () => {
+      const f = fileInput.files?.[0];
+      if (!f || !uploadKey) return;
+      const buf = await f.arrayBuffer();
+      const res = await fetch(`api/image?key=${encodeURIComponent(uploadKey)}`, {
+        method: "POST", body: buf,
+      });
+      if (res.ok) { imgBust = Date.now(); renderRoster(); setSaved("画像を保存しました"); }
+      else setSaved("画像の保存に失敗しました");
+    });
+
+    const actions = document.querySelector("#pane-roster .actions")!;
+    const syncBtn = document.createElement("button");
+    syncBtn.className = "act ghost";
+    syncBtn.textContent = "Claudeと同期 (git push)";
+    syncBtn.addEventListener("click", async () => {
+      syncBtn.disabled = true;
+      syncBtn.textContent = "同期中...";
+      try {
+        const r = await (await fetch("api/sync", { method: "POST" })).json();
+        syncBtn.textContent = r.ok
+          ? (r.committed ? "同期しました" : "変更なし(push済み)")
+          : "pushに失敗（要ネットワーク/認証）";
+      } catch {
+        syncBtn.textContent = "同期に失敗しました";
+      }
+      setTimeout(() => {
+        syncBtn.textContent = "Claudeと同期 (git push)";
+        syncBtn.disabled = false;
+      }, 2500);
+    });
+    actions.insertBefore(syncBtn, actions.children[1]);
+  }
 
   ($("syncLv") as HTMLInputElement).value = String(state.sync);
   ($("barLv") as HTMLSelectElement).value = String(state.bar);

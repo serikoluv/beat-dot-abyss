@@ -35,3 +35,18 @@ src/
 
 main への push で `.github/workflows/pages.yml` が `web/dist` を GitHub Pages に公開する。
 初回はリポジトリの Settings → Pages で Source を「GitHub Actions」にすること。
+
+## 個人アプリとして使う（ローカル駆動）
+
+```bash
+cd web && npm install && npm run dev   # http://localhost:5173
+```
+
+dev サーバ自体がアプリ本体で、ローカルAPI（vite.config.ts の localApi プラグイン）が同居する:
+
+- ロスターの正は `../data/roster.json`（リポジトリ管理）。UIの変更は自動でファイル保存される
+- 画像はキャラのサムネイル（画像列）をクリックして設定 → `public/chars/` に保存
+  （**gitignore済み** — 公開リポジトリにゲーム画像を含めないため）
+- 「Claudeと同期 (git push)」ボタンで roster.json を commit & push →
+  Claude がリポジトリ経由で手持ちデータを読める
+- API が無い環境（Artifact / file:// / GitHub Pages）では従来どおり localStorage で動作

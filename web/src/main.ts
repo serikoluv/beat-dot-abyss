@@ -7,13 +7,15 @@ import { initAdvisor } from "./views/advisor";
 import { initGuide } from "./views/guide";
 import { $ } from "./util";
 
-if (!storageOk) $("storageBanner").style.display = "block";
-
-loadState();
-initRoster();
-initOptimize();
-initAdvisor();
-initGuide();
-initRouter();
-
-if (storageOk) setSaved(hasSaved() ? "保存済み" : "未入力");
+(async () => {
+  await loadState();
+  const { apiMode } = await import("./state");
+  if (!storageOk && !apiMode) $("storageBanner").style.display = "block";
+  initRoster();
+  initOptimize();
+  initAdvisor();
+  initGuide();
+  initRouter();
+  if (apiMode) setSaved("ローカルファイル同期モード");
+  else if (storageOk) setSaved(hasSaved() ? "保存済み" : "未入力");
+})();

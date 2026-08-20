@@ -55,13 +55,14 @@
     <div class="tablebox">
     <table id="rosterTable">
       <thead><tr>
-        <th>所持</th><th>キャラ</th><th>レア</th><th>所属</th><th>属性</th><th>スタンス</th>
+        <th>所持</th><th class="imgcol">画像</th><th>キャラ</th><th>レア</th><th>所属</th><th>属性</th><th>スタンス</th>
         <th>凸</th><th>絆Lv</th><th>アビ1</th><th>アビ2</th><th>アビ3</th><th>娼館提案</th>
       </tr></thead>
       <tbody id="rows"></tbody>
     </table>
     </div>
 
+    <input type="file" id="imgFile" accept="image/*" style="display:none">
     <div class="actions">
       <button class="act" id="copyCsv">シミュレータ用CSVをコピー</button>
       <button class="act ghost" id="copyJson">JSONをコピー</button>

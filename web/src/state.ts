@@ -14,7 +14,25 @@ export const defaultEntry = (): Entry => ({ o: false, lb: 0, bond: 0, a1: 1, a2:
 
 export let state: AppState = { sync: 60, bar: 3, chars: {} };
 
-export function loadState(): void {
+/* ローカルAPI（vite.config.tsのlocalApiプラグイン）が生えている環境では
+   data/roster.json を正とし、無い環境（Artifact/file://）ではlocalStorageで動く */
+export let apiMode = false;
+
+export async function loadState(): Promise<void> {
+  try {
+    const ctrl = new AbortController();
+    const t = setTimeout(() => ctrl.abort(), 1500);
+    const res = await fetch("api/roster", { signal: ctrl.signal });
+    clearTimeout(t);
+    if (res.ok && (res.headers.get("content-type") || "").includes("json")) {
+      const s = await res.json();
+      if (s && typeof s.chars === "object") {
+        apiMode = true;
+        state = { sync: s.sync || 60, bar: s.bar || 3, chars: s.chars };
+        return;
+      }
+    }
+  } catch { /* API無し → localStorageへフォールバック */ }
   if (!storageOk) return;
   try {
     const raw = localStorage.getItem(LS_KEY);
@@ -32,11 +50,21 @@ export function replaceState(s: AppState): void { state = s; }
 
 let saveTimer: ReturnType<typeof setTimeout> | null = null;
 export function save(): void {
-  if (!storageOk) { setSaved("手動バックアップ推奨"); return; }
   if (saveTimer) clearTimeout(saveTimer);
   saveTimer = setTimeout(() => {
-    localStorage.setItem(LS_KEY, JSON.stringify(state));
-    setSaved("保存済み");
+    if (storageOk) localStorage.setItem(LS_KEY, JSON.stringify(state));
+    if (apiMode) {
+      fetch("api/roster", {
+        method: "PUT",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify(state),
+      }).then(r => setSaved(r.ok ? "保存済み(ファイル)" : "ファイル保存失敗"))
+        .catch(() => setSaved("ファイル保存失敗"));
+    } else if (storageOk) {
+      setSaved("保存済み");
+    } else {
+      setSaved("手動バックアップ推奨");
+    }
   }, 300);
 }
 
